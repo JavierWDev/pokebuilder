@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="app/assets/css/styles.css">
+
+</head>
+<body class="stop--scroll">
+
+    <div id="overlay" class="overlay">
+        <div class="pokeball">
+            <div class="pokeball__top"></div>
+            <div class="pokeball__bottom"></div>
+            <div class="pokebal__circle"></div>
+        </div>
+
+        <div class="message"></div>
+    </div>
+
+    <main class="app" id="app">
+
+        <h1>Team Builder</h1>
+
+        <form id="generations">
+            <div>
+                <input type="checkbox" name="generation-i" id="generation-i" checked>
+                <label for="generation-i">1 - Generacion</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="generation-ii" id="generation-ii" checked>
+                <label for="generation-ii">2 - Generacion</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="generation-iii" id="generation-iii" checked>
+                <label for="generation-iii">3 - Generacion</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="generation-iv" id="generation-iv" checked>
+                <label for="generation-iv">4 - Generacion</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="generation-v" id="generation-v" checked>
+                <label for="generation-v">5 - Generacion</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="generation-vi" id="generation-vi" checked>
+                <label for="generation-vi">6 - Generacion</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="generation-vii" id="generation-vii" checked>
+                <label for="generation-vii">7 - Generacion</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="generation-viii" id="generation-viii" checked>
+                <label for="generation-viii">8 - Generacion</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="generation-ix" id="generation-ix" checked>
+                <label for="generation-ix">9 - Generacion</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="alt-form" id="alt-form" checked>
+                <label for="alt-form">Variaciones Pokemon</label>
+            </div>
+        </form>
+
+        <ul class="team--container" id="team">
+            <li class="pokeTeam">
+                <button>
+                    <img src="app/assets/img/poke_egg.png" alt="Image Egg">
+                </button>
+                <p class="pokeName">???</p>
+                <div class="types"></div>
+            </li>
+            <li class="pokeTeam">
+                <button>
+                    <img src="app/assets/img/poke_egg.png" alt="Image Egg">
+                </button>
+                <p class="pokeName">???</p>
+                <div class="types"></div>
+            </li>
+            <li class="pokeTeam">
+                <button>
+                    <img src="app/assets/img/poke_egg.png" alt="Image Egg">
+                </button>
+                <p class="pokeName">???</p>
+                <div class="types"></div>
+            </li>
+            <li class="pokeTeam">
+                <button>
+                    <img src="app/assets/img/poke_egg.png" alt="Image Egg">
+                </button>
+                <p class="pokeName">???</p>
+                <div class="types"></div>
+            </li>
+            <li class="pokeTeam">
+                <button>
+                    <img src="app/assets/img/poke_egg.png" alt="Image Egg">
+                </button>
+                <p class="pokeName">???</p>
+                <div class="types"></div>
+            </li>
+            <li class="pokeTeam">
+                <button>
+                    <img src="app/assets/img/poke_egg.png" alt="Image Egg">
+                </button>
+                <p class="pokeName">???</p>
+                <div class="types"></div>
+            </li>
+        </ul>
+
+        <ul class="pokemons--container" id="pokemons">
+
+        </ul>
+
+    </main>
+
+    <script src="app/index.js" type="module"></script>
+</body>
+</html>

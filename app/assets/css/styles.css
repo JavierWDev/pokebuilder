@@ -1,0 +1,412 @@
+/* *******************************************
+               Custom Properties
+******************************************* */
+:root{
+    /* ***************************************
+                    Colors 
+    ************************************** */
+    /* *** Primary *** */
+    --background: #f0f0f0;
+    --app: #f6f6f6;
+    --button: #eeeeee;
+    --pokeTop: #cc2020;
+    --pokeTopBorder: #992020;
+    --pokeBottom: #f3eded;
+    --pokeBottomBorder: #adadad;
+    --pokeCenter: #cacaca;
+    --pokeCenterBorder: #bebebe;
+    --pokeSeparator: #242424;
+
+    /* *** Secondary *** */
+    --normal: #a8a878;
+    --normarBorder: #6d6d4e;
+    --fire: #f08030;
+    --fireBorder: #9c531f;
+    --fighting: #c03028;
+    --fightingBorder: #7d1f1a;
+    --water: #6890f0;
+    --waterBorder: #445e9c;
+    --flying: #a890f0;
+    --flyingBorder: #6d5e9c;
+    --grass: #78c850;
+    --grassBorder: #a7db8d;
+    --poison: #a040a0;
+    --poisonBorder: #682a68;
+    --electric : #f8d030;
+    --electricBorder : #a1871f;
+    --ground : #e0c068;
+    --groundBorder : #927d44;
+    --psychic : #f85888;
+    --psychicBorder : #a13959;
+    --rock : #b8a038;
+    --rockBorder : #786824;
+    --ice : #98d8d8;
+    --iceBorder : #638d8d;
+    --bug : #a8b820;
+    --bugBorder : #6d7815;
+    --dragon : #7038f8;
+    --dragonBorder : #4924a1;
+    --ghost : #705898;
+    --ghostBorder : #705898;
+    --dark : #705848;
+    --darkBorder : #705848;
+    --steel : #b8b8d0;
+    --steelBorder : #787887;
+    --fairy : #ee99ac;
+    --fairyBorder : #ee99ac;
+    --none : #68a090;
+    --noneBorder : #44685e;
+
+
+    /* ***************************************
+                    Fonts 
+    ************************************** */
+}
+
+/* *******************************************
+                   Globals
+******************************************* */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: monospace;
+    font-size: 1.4rem;
+    background-color: var(--background);
+    padding: 5rem 0;
+}
+
+img, video, audio {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+/* *******************************************
+                  Utilities
+******************************************* */
+.hidden{
+    display: none;
+}
+
+/* *******************************************
+                    Styles
+******************************************* */
+
+/* Overlay de la App */
+.stop--scroll{
+    overflow: hidden;
+}
+
+.overlay{
+    width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--app);
+    gap: 2rem;
+    z-index: 2000;
+}
+
+.pokeball {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+  
+.pokeball__top {
+    background: var(--pokeTop);
+    height: min(35vw, 100px);
+    width: min(70vw, 200px);
+    border-radius: 150px 150px 0 0;
+    position: relative;
+    z-index: 2;
+    border: min(2vw, 2px) solid var(--pokeTopBorder);
+    border-bottom: min(2vw, 3px) solid var(--pokeSeparator) ;
+}
+  
+.pokeball__bottom {
+    background: var(--pokeBottom);
+    position: relative;
+    height: min(35vw, 100px);
+    width: min(70vw, 200px);
+    border-radius: 150px 150px 0 0;
+    border: min(2vw, 2px) solid var(--pokeBottomBorder);
+    border-bottom: min(2vw, 3px) solid var(--pokeSeparator) ;
+    transform: rotate(180deg);
+    z-index: 2;
+}
+  
+.pokebal__circle {
+    background: var(--pokeCenter);
+    border-radius: 50%;
+    position: absolute;
+    height: min(15vw, 4rem);
+    width: min(15vw, 4rem);
+    z-index: 4;
+    border: min(2vw, 6px) solid var(--pokeSeparator);
+}
+
+.message{
+    max-width: 40rem;
+    padding: 1rem 0;
+    text-align: center;
+    border-radius: 5px;
+    font-size: clamp(2rem, 1rem + 3vw, 4rem);
+}
+
+.app{
+    width: 95%;
+    max-width: 110rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--app);
+    width: 100%;
+    border-radius: 10px;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+/* ************************************************
+
+                Contenedor del Equipo
+
+************************************************* */
+.team--container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: var(--app);
+    padding: 4rem;
+    border-radius: 15px;
+    gap: 2rem;
+}
+
+.team--container li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    width: min(15rem , 33vw);
+}
+
+.pokeName{
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 0 .5rem 0;
+}
+
+.types{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    font-size: min(1.4rem , 5vw);;
+}
+
+.types p{
+    width: 100%;
+    max-width: 8rem;
+    text-align: center;
+    padding: .5rem 0;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: var(--button);
+}
+
+.team--container button{
+    width: 100%;
+    max-width: 15rem;
+    background-color: var(--button);
+    border: none;
+    border-radius: 15px;
+}
+
+.team--container button:hover img{
+    animation-name: bounce;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+}
+
+/* Contenedor de Pokemon */
+.pokemons--container{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    background-color: var(--app);
+    padding: 4rem 2rem;
+    border-radius: 15px;
+}
+
+/* Pokemon es el button contenedor de cada pokemon */
+.pokemon{
+    background-color: var(--button);
+    border: unset;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 7rem;    
+}
+
+.pokemon img{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1);
+}
+
+.pokemon:hover > img{
+    animation-name: bounce;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(2px);
+    }
+
+    100%{
+        transform: translateY(-2px);
+    }
+}
+
+.types p.normal{
+    background-color: var(--normal);
+    border: 1.5px solid var(--normarBorder);
+}
+
+.types p.fire{
+    background-color: var(--fire);
+    border: 1.5px solid var(--fireBorder);
+}
+
+.types p.fighting{
+    background-color: var(--fighting);
+    border: 1.5px solid var(--fightingBorder);
+}
+
+.types p.water{
+    background-color: var(--water);
+    border: 1.5px solid var(--waterBorder);
+}
+
+.types p.flying{
+    background-color: var(--flying);
+    border: 1.5px solid var(--flyingBorder);
+}
+
+.types p.grass{
+    background-color: var(--grass);
+    border: 1.5px solid var(--grassBorder);
+}
+
+.types p.poison{
+    background-color: var(--poison);
+    border: 1.5px solid var(--poisonBorder);
+}
+
+.types p.electric{
+    background-color: var(--electric);
+    border: 1.5px solid var(--electricBorder);
+}
+
+.types p.ground{
+    background-color: var(--ground);
+    border: 1.5px solid var(--groundBorder);
+}
+
+.types p.psychic{
+    background-color: var(--psychic);
+    border: 1.5px solid var(--psychicBorder);
+}
+
+.types p.rock{
+    background-color: var(--rock);
+    border: 1.5px solid var(--rockBorder);
+}
+
+.types p.ice{
+    background-color: var(--ice);
+    border: 1.5px solid var(--iceBorder);
+}
+
+.types p.bug{
+    background-color: var(--bug);
+    border: 1.5px solid var(--bugBorder);
+}
+
+.types p.dragon{
+    background-color: var(--dragon);
+    border: 1.5px solid var(--dragonBorder);
+}
+
+.types p.ghost{
+    background-color: var(--ghost);
+    border: 1.5px solid var(--ghostBorder);
+}
+
+.types p.dark{
+    background-color: var(--dark);
+    border: 1.5px solid var(--darkBorder);
+}
+
+.types p.steel{
+    background-color: var(--steel);
+    border: 1.5px solid var(--steelBorder);
+}
+
+.types p.fairy{
+    background-color: var(--fairy);
+    border: 1.5px solid var(--fairyBorder);
+}
